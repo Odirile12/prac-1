@@ -1,13 +1,9 @@
-#ifndef PDFEXPORTER_H
-#define PDFEXPORTER_H
 
-#include "ExportCanvas.h"
-
-class PDFExporter : public ExportCanvas {
-    private:
-        void saveToFile() override;
-
+#include "PDFExporter.h"
+#include <iostream>
+PDFExporter::PDFExporter(Canvas* canvas) : ExportCanvas(canvas) {
+    
 };
-
-
-#endif
+void PDFExporter::saveToFile() {
+    std::cout << "Saving canvas as PDF file..." << std::endl;
+};

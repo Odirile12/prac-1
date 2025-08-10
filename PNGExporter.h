@@ -4,6 +4,9 @@
 #include "ExportCanvas.h"
 
 class PNGExporter : public ExportCanvas {
+    public:
+    PNGExporter(Canvas* canvas);
+    
     private:
         void saveToFile() override;
 

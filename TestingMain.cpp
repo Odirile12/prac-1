@@ -9,6 +9,10 @@ using namespace std;
 #include "SquareFactory.h"
 #include "CareTaker.h"
 #include "Canvas.h"
+#include "ExportCanvas.h"
+
+#include "PNGExporter.h"
+#include "PDFExporter.h"
 
 int main(){
     RectangleFactory rectangleFactory;
@@ -66,6 +70,24 @@ int main(){
     careTaker->checkStorage();
     std::cout<<"done checking "<< std::endl;
 
+    std::cout<< std::endl;
+    std::cout<< std::endl;
+
+    ExportCanvas* pngExporter = new PNGExporter(canvas);
+    ExportCanvas* pdfExporter = new PDFExporter(canvas2);
+
+    pngExporter->exportFile();
+    std::cout<< std::endl;
+    std::cout<< std::endl;
+    
+    pdfExporter->exportFile();
+
+    // delete canvas;
+    // delete canvas2;
+    // delete canvas3;
+    // delete careTaker;
+    // delete pngExporter;
+    // delete pdfExporter;
 
 
     
