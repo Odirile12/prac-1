@@ -6,12 +6,15 @@ Square::Square(int length, int width , std::string color , int position_x, int p
         std::cout << "Warning: Square created with unequal length and width." << std::endl;
     }
     
-
-    
-
 }
 Square::~Square() {
 }
+void Square::print() {
+    std::cout << "Square: Length = " << length << ", Width = " << width 
+              << ", Color = " << color
+              << ", Position = (" << position_x << ", " << position_y << ")";
+}
+
 Shape* Square::clone() {
     Square* squareClone = new Square();
     squareClone->length = this->length;

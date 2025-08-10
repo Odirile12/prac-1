@@ -18,7 +18,7 @@ void RectangleFactory::toString() {
     std::cout << "Length: " << newRectangle->getLength() << ", Width: " << newRectangle->getWidth()
               << ", Color: " << newRectangle->getColor() 
               << ", Position: (" << newRectangle->getPositionX() << ", " << newRectangle->getPositionY() << ")" 
-              << std::endl;
+             ;
 
 
  

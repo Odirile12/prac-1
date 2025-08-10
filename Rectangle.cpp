@@ -1,10 +1,17 @@
 #include "Rectangle.h"
+#include <iostream>
 
 Rectangle::Rectangle(int length, int width, std::string color , int position_x , int position_y):length(length), width(width), color(color), position_x(position_x), position_y(position_y) {
 
 }
 Rectangle::~Rectangle() {
 }
+void Rectangle::print() {
+    std::cout << "Rectangle: Length = " << length << ", Width = " << width 
+              << ", Color = " << color
+                << ", Position = (" << position_x << ", " << position_y << ")";
+}
+
 
 Shape* Rectangle::clone() {
     

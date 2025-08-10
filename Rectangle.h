@@ -12,6 +12,7 @@ class Rectangle: public Shape {
     public:
         Rectangle(int length = 0, int width = 0, std::string color = "", int position_x = 0, int position_y = 0);
         ~Rectangle();
+        void print() override;
         Shape* clone() override;
 
 };

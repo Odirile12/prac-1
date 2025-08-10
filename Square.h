@@ -13,6 +13,7 @@ class Square : public Shape {
     public:
         Square(int length = 0, int width = 0, std::string color = "", int position_x = 0, int position_y = 0);
         ~Square();
+        void print() override;
         Shape* clone() override;
 
 
